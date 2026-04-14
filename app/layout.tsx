@@ -17,7 +17,7 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: {
-    default: "PRISM — Live Method Resolution Order for VS Code | Python Inheritance Visualizer",
+    default: "PRISM — Live Method Resolution Order for VS Code | Python, TypeScript, Java & 7 More",
     template: "%s | PRISM",
   },
   description:
@@ -38,12 +38,21 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://prism-tools.dev",
     siteName: "PRISM",
+    images: [
+      {
+        url: "https://prism-tools.dev/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "PRISM — Live Method Resolution Order for VS Code",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "PRISM — Live Method Resolution Order for VS Code",
     description:
       "See which version of a method actually runs. Dead code detection for Python inheritance chains. Free.",
+    images: ["https://prism-tools.dev/og-image.png"],
   },
   alternates: {
     canonical: "https://prism-tools.dev",
