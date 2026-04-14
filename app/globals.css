@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* ── Light mode (default root, overridden by .dark) ── */
+  :root {
+    --bg: 255 255 255;
+    --surface: 245 245 245;
+    --surface-2: 238 238 238;
+    --surface-3: 232 232 232;
+    --border: 229 229 229;
+    --border-2: 212 212 212;
+    --text: 10 10 10;
+    --text-2: 82 82 91;
+    --text-3: 161 161 170;
+
+    /* Status colors — darkened for contrast on white */
+    --prism-green: 5 150 105;
+    --prism-amber: 217 119 6;
+    --prism-purple: 124 58 237;
+    --prism-red: 220 38 38;
+
+    /* Syntax highlighting */
+    --syn-str: 5 150 105;
+    --syn-arg: 194 65 12;
+  }
+
+  /* ── Dark mode ── */
+  .dark {
+    --bg: 10 10 10;
+    --surface: 17 17 17;
+    --surface-2: 22 22 22;
+    --surface-3: 26 26 26;
+    --border: 26 26 26;
+    --border-2: 42 42 42;
+    --text: 250 250 250;
+    --text-2: 161 161 170;
+    --text-3: 82 82 91;
+
+    /* Status colors — vivid on dark backgrounds */
+    --prism-green: 16 185 129;
+    --prism-amber: 245 158 11;
+    --prism-purple: 139 92 246;
+    --prism-red: 239 68 68;
+
+    /* Syntax highlighting */
+    --syn-str: 110 231 183;
+    --syn-arg: 253 186 116;
+  }
+
+  * {
+    border-color: rgb(var(--border));
+  }
+
+  body {
+    @apply bg-bg text-text antialiased;
+  }
+
+  ::selection {
+    @apply bg-prism-purple/30;
+  }
+
+  .dark ::selection {
+    @apply text-white;
+  }
+
+  ::-webkit-scrollbar { @apply w-1.5; }
+  ::-webkit-scrollbar-track { @apply bg-transparent; }
+  ::-webkit-scrollbar-thumb { @apply bg-border-2 rounded-full; }
+}
+
+@layer components {
+  .label {
+    @apply font-mono text-[11px] tracking-[0.15em] uppercase text-text-3;
+  }
+
+  /* Syntax highlighting tokens */
+  .kw { color: rgb(var(--prism-purple)); }
+  .fn { color: rgb(var(--prism-amber)); }
+  .cls { color: rgb(var(--prism-green)); }
+  .str { color: rgb(var(--syn-str) / 0.7); }
+  .arg { color: rgb(var(--syn-arg) / 0.7); }
+  .cmt { @apply text-text-3 italic; }
+  .dec { color: rgb(var(--prism-purple) / 0.8); }
+}

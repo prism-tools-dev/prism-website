@@ -1,0 +1,50 @@
+# PRISM — Program Resolution & Inheritance Shadow Monitor
+
+> PRISM is a VS Code extension that shows, in real time, exactly where a method lives in its inheritance chain and whether the version you're editing is the one that actually runs.
+
+## What PRISM does
+
+PRISM analyzes Python (and 9 other languages) class hierarchies using static analysis. As a developer moves their cursor in VS Code, PRISM computes the method resolution order (MRO) and classifies every method into one of four states:
+
+- **owns**: Only this class defines it. It runs.
+- **overrides**: A base class also defines it, but this version wins.
+- **overridden**: This version runs for direct instances, but a descendant redefines it.
+- **shadowed**: A base class version wins. This code never runs (dead code).
+
+Analysis completes in under 200 milliseconds per cursor movement.
+
+## Install
+
+- VS Code Marketplace: https://marketplace.visualstudio.com/items?itemName=TemilolaOlowolayemo.prism-vscode
+- Open VSX (Cursor, VSCodium): https://open-vsx.org/extension/TemilolaOlowolayemo/prism-vscode
+
+## Key features
+
+- Live MRO panel with class cards and method pills
+- Four color-coded method statuses (owns, overrides, overridden, shadowed)
+- Interactive mindmap and radial hierarchy views
+- CodeLens editor annotations
+- Workspace-wide dead code scanning
+- Hover cards with file, line, status, and super() call info
+- 10 language support: Python, TypeScript, Java, C++, Go, C#, Ruby, PHP, Swift, Kotlin
+
+## Technical architecture
+
+- Persistent Python subprocess (no per-request spawning)
+- AST caching keyed by file mtime
+- C3 linearization computed from source (no runtime execution)
+- JSON-over-stdin/stdout IPC between TypeScript extension and Python backend
+- 80ms cursor debounce + <120ms analysis = <200ms total
+
+## Links
+
+- Website: https://prism-tools.dev
+- Features: https://prism-tools.dev/features
+- Playground: https://prism-tools.dev/playground
+- Blog: https://prism-tools.dev/blog
+- About: https://prism-tools.dev/about
+- GitHub: https://github.com/temilola23
+
+## Author
+
+Temilola Olowolayemo — built PRISM after an internship at Uber's ML Platform team, where deep inheritance hierarchies in production ML code made it impossible to know which method version actually ran.

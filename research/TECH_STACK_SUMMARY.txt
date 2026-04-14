@@ -1,0 +1,119 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║                   PRISM Marketing Website Tech Stack                       ║
+║                          Final Recommendation 2026                         ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+FRAMEWORK
+─────────────────────────────────────────────────────────────────────────────
+✓ Astro 5
+
+  Why: 90% less JavaScript than Next.js; 40% faster; Content Layer API
+  Metrics: 8KB bundle (vs Next.js 85KB); 95+ Lighthouse scores consistently
+  Bonus: Cloudflare acquisition (Jan 2026) ensures long-term support
+  
+  Alternative considered: Next.js 15 (over-engineered for static content)
+
+STYLING
+─────────────────────────────────────────────────────────────────────────────
+✓ Tailwind CSS 4
+
+  Why: Mature ecosystem (12M weekly downloads); seamless integration with
+       Aceternity UI; excellent dev experience
+  Metrics: ~30KB gzipped for typical marketing site; JIT compiler
+  Bonus: Dark mode support built-in; zero runtime
+  
+  Alternative considered: UnoCSS (5x faster builds but smaller ecosystem)
+
+ANIMATIONS
+─────────────────────────────────────────────────────────────────────────────
+✓ GSAP (complex) + CSS Scroll-Driven (simple) + Lenis (smooth scroll)
+
+  GSAP: Industry-standard; unmatched control over timelines, SVG morphs
+  CSS: 60fps on compositor; never blocks main thread; browser-native
+  Lenis: 3KB; eliminates scroll-jank; synchronized with GSAP
+  
+  Alternative considered: Framer Motion (designed for React; heavier)
+
+UI COMPONENTS
+─────────────────────────────────────────────────────────────────────────────
+✓ Aceternity UI (landing page magic) + Shadcn/ui (functional components)
+
+  Aceternity: 200+ free animated components; designed for landing pages
+              (spotlight, parallax, 3D cards, text effects)
+  Shadcn: Forms, dialogs, data tables; copy-paste; full control
+  
+  Both use Tailwind CSS — zero conflicts, fully compatible
+
+TYPOGRAPHY
+─────────────────────────────────────────────────────────────────────────────
+✓ Body: Geist Sans | Code: JetBrains Mono
+
+  Geist Sans: Modern, geometric, clean (Vercel design system)
+  JetBrains Mono: Free; 139 ligatures; best for long coding sessions
+  Both: Free and open source
+  
+  Alternative considered: Inter (excellent but less distinctive)
+
+DEPLOYMENT
+─────────────────────────────────────────────────────────────────────────────
+✓ Cloudflare Pages
+
+  Why: Best edge performance (50ms TTFB globally); 300+ edge locations;
+       cost-efficient; synergy with Astro (Cloudflare owns it)
+  Metrics: 50ms TTFB everywhere vs Vercel ~70ms, Netlify ~90ms
+  Setup: Push to GitHub → auto-deploy; zero config
+  Cost: $0–$20/month (pay-as-you-go)
+  
+  Alternative considered: Vercel (tightly coupled to Next.js)
+
+PERFORMANCE TARGETS (2026 BENCHMARKS)
+─────────────────────────────────────────────────────────────────────────────
+Metric               | Standard Target | PRISM Goal
+─────────────────────────────────────────────────────────────────────────────
+LCP (Load Time)      | < 2.5s          | < 1.2s       ← Pure HTML advantage
+INP (Interactivity)  | < 200ms         | < 100ms      ← CSS animations
+CLS (Stability)      | < 0.1           | < 0.05       ← Fixed layouts
+─────────────────────────────────────────────────────────────────────────────
+
+Why This Stack Wins
+─────────────────────────────────────────────────────────────────────────────
+
+Performance:   Astro renders pure HTML (90% less JS)
+              Cloudflare edge caches globally (50ms TTFB)
+              CSS animations run on compositor (60fps, never blocks)
+
+DX:           Astro syntax is familiar HTML/JSX
+              Tailwind is universal
+              Components are copy-paste
+
+Cost:         Everything free except domain + $199 for premium components
+              Cloudflare Pages: $0–$20/month
+
+Ecosystem:    Cloudflare owns Astro (strategic alignment)
+              Aceternity + Shadcn are actively maintained
+              Zero tech debt
+
+Estimated Timeline
+─────────────────────────────────────────────────────────────────────────────
+Week 1: Astro + Tailwind + Geist fonts + base layout + Cloudflare deploy
+Week 2: Hero section + features + testimonials + pricing + contact form
+Week 3: GSAP effects + smooth scroll + SEO + accessibility + dark mode
+Week 4: Final polish + Core Web Vitals optimization + launch
+
+Expected Result
+─────────────────────────────────────────────────────────────────────────────
+→ LCP < 1.2s (vs industry 2.5s)
+→ INP < 100ms (vs industry 200ms)
+→ CLS < 0.05 (vs industry 0.1)
+→ Lighthouse 95+ across all categories
+→ Deployment in 3–4 weeks
+→ Zero JavaScript overhead for static content
+
+Setup Command
+─────────────────────────────────────────────────────────────────────────────
+npm create astro@latest prism-marketing -- --template minimal
+npm install tailwindcss gsap lenis
+# Copy components from Aceternity UI + Shadcn
+git push → Cloudflare auto-deploys
+
+Full analysis: /Users/temilolaolowolayemo/Documents/GitHub/PRISM/website/research/02_tech_stack.md

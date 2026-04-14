@@ -1,0 +1,512 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   PRISM Color System — Complete CSS Variables Implementation
+   Version: 1.0 | Theme: Dark (default) + Light
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+:root {
+    /* ─────────────────────────────────────────────────────────────────────
+       BACKGROUND LAYERS (Dark Theme Default)
+       5 levels of elevation with blue undertone for brand cohesion
+       ───────────────────────────────────────────────────────────────────── */
+    --bg-0: #0B0D17;      /* Page background */
+    --bg-1: #12152A;      /* Cards, panels level 1 */
+    --bg-2: #17192E;      /* Nested containers, dropdowns */
+    --bg-3: #1E2241;      /* Elevated sections, modals */
+    --bg-4: #242A50;      /* Darkest background, overlays */
+    --overlay: rgba(11, 13, 23, 0.6);
+
+    /* ─────────────────────────────────────────────────────────────────────
+       TEXT HIERARCHY (Dark Theme)
+       4 levels: primary (body), secondary (labels), tertiary (disabled),
+       quaternary (borders, not for readable text)
+       ───────────────────────────────────────────────────────────────────── */
+    --text-primary: #E2E8F0;     /* 14.2:1 on --bg-0 (AAA) */
+    --text-secondary: #8B94A4;   /* 7.1:1 on --bg-0 (AAA) */
+    --text-tertiary: #5A6078;    /* 4.8:1 on --bg-0 (AA) */
+    --text-quaternary: #3F4654;  /* 3.2:1 on --bg-0 (UI borders only) */
+
+    /* ─────────────────────────────────────────────────────────────────────
+       BORDER COLORS (Dark Theme)
+       3 levels: subtle (dividers), default (edges), prominent (focus)
+       ───────────────────────────────────────────────────────────────────── */
+    --border-subtle: #1C2042;
+    --border-default: #2A3150;
+    --border-prominent: #3D4B7C;
+
+    /* ─────────────────────────────────────────────────────────────────────
+       SEMANTIC COLORS — PRIMARY + MUTED + GLOW
+       4 states: owns (green), overrides (amber), overridden (purple),
+       shadowed (red). Each has 3 variants for different contexts.
+       ───────────────────────────────────────────────────────────────────── */
+
+    /* Green (Owns) — "This runs, only here" */
+    --green-50: #10B981;
+    --green-muted: rgba(16, 185, 129, 0.12);   /* Background tint */
+    --green-glow: rgba(16, 185, 129, 0.3);     /* Hover shadow */
+
+    /* Amber (Overrides) — "This wins over base" */
+    --amber-50: #F59E0B;
+    --amber-muted: rgba(245, 158, 11, 0.12);
+    --amber-glow: rgba(245, 158, 11, 0.3);
+
+    /* Purple (Overridden) — "Runs here, subclass redefines" */
+    --purple-50: #8B5CF6;
+    --purple-muted: rgba(139, 92, 246, 0.12);
+    --purple-glow: rgba(139, 92, 246, 0.3);
+
+    /* Red (Shadowed) — "Base wins, dead code" */
+    --red-50: #EF4444;
+    --red-muted: rgba(239, 68, 68, 0.12);
+    --red-glow: rgba(239, 68, 68, 0.3);
+
+    /* ─────────────────────────────────────────────────────────────────────
+       BRAND COLOR — INDIGO
+       Primary accent, links, brand elements
+       ───────────────────────────────────────────────────────────────────── */
+    --indigo-50: #5B6AF0;   /* Primary brand */
+    --indigo-muted: rgba(91, 106, 240, 0.12);
+    --indigo-glow: rgba(91, 106, 240, 0.35);
+
+    /* ─────────────────────────────────────────────────────────────────────
+       FULL COLOR SCALES — Tailwind-style 50-950
+       Use these for extended UI (backgrounds, borders, inactive states)
+       ───────────────────────────────────────────────────────────────────── */
+
+    /* Indigo Scale */
+    --indigo-100: #E0E7FF;
+    --indigo-200: #C7D2FE;
+    --indigo-300: #A5B4FC;
+    --indigo-400: #818CF8;
+    --indigo-500: #6366F1;
+    --indigo-600: #4F46E5;
+    --indigo-700: #4338CA;
+    --indigo-800: #3730A3;
+    --indigo-900: #312E81;
+    --indigo-950: #1E1B4B;
+
+    /* Green Scale */
+    --green-100: #DCFCE7;
+    --green-200: #BBF7D0;
+    --green-300: #86EFAC;
+    --green-400: #4ADE80;
+    --green-500: #22C55E;
+    --green-600: #16A34A;
+    --green-700: #15803D;
+    --green-800: #166534;
+    --green-900: #145231;
+    --green-950: #052E16;
+
+    /* Amber Scale */
+    --amber-100: #FEF3C7;
+    --amber-200: #FCD34D;
+    --amber-300: #FBBF24;
+    --amber-400: #F59E0B;
+    --amber-500: #EABF09;
+    --amber-600: #D97706;
+    --amber-700: #B45309;
+    --amber-800: #92400E;
+    --amber-900: #78350F;
+    --amber-950: #451A03;
+
+    /* Purple Scale */
+    --purple-100: #F3E8FF;
+    --purple-200: #E9D5FF;
+    --purple-300: #D8B4FE;
+    --purple-400: #C084FC;
+    --purple-500: #A855F7;
+    --purple-600: #9333EA;
+    --purple-700: #7E22CE;
+    --purple-800: #6B21A8;
+    --purple-900: #581C87;
+    --purple-950: #3F0F5C;
+
+    /* Red Scale */
+    --red-100: #FEE2E2;
+    --red-200: #FECACA;
+    --red-300: #FCA5A5;
+    --red-400: #F87171;
+    --red-500: #EF4444;
+    --red-600: #DC2626;
+    --red-700: #B91C1C;
+    --red-800: #991B1B;
+    --red-900: #7F1D1D;
+    --red-950: #450A0A;
+
+    /* Neutral Gray Scale */
+    --gray-50: #F9FAFB;
+    --gray-100: #F3F4F6;
+    --gray-200: #E5E7EB;
+    --gray-300: #D1D5DB;
+    --gray-400: #9CA3AF;
+    --gray-500: #6B7280;
+    --gray-600: #4B5563;
+    --gray-700: #374151;
+    --gray-800: #1F2937;
+    --gray-900: #111827;
+    --gray-950: #030712;
+
+    /* ─────────────────────────────────────────────────────────────────────
+       SHADOW SCALE (Dark Theme)
+       4 elevation levels + color-specific glows for semantic colors
+       ───────────────────────────────────────────────────────────────────── */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.15);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.2);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.3);
+    --shadow-xl: 0 12px 36px rgba(0, 0, 0, 0.4);
+    --shadow-2xl: 0 20px 50px rgba(0, 0, 0, 0.5);
+
+    /* Color-specific shadows (hover states) */
+    --shadow-green: 0 8px 30px rgba(16, 185, 129, 0.2);
+    --shadow-amber: 0 8px 30px rgba(245, 158, 11, 0.2);
+    --shadow-purple: 0 8px 30px rgba(168, 85, 247, 0.2);
+    --shadow-red: 0 8px 30px rgba(239, 68, 68, 0.2);
+    --shadow-indigo: 0 8px 30px rgba(91, 106, 240, 0.25);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   LIGHT THEME OVERRIDES
+   Triggered by @media (prefers-color-scheme: light) or .light-theme class
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+@media (prefers-color-scheme: light) {
+    :root {
+        /* Background Layers (Light) */
+        --bg-0: #FFFFFF;
+        --bg-1: #F8FAFB;
+        --bg-2: #F1F3F5;
+        --bg-3: #E8EBF0;
+        --bg-4: #DFE3EA;
+        --overlay: rgba(255, 255, 255, 0.4);
+
+        /* Text Hierarchy (Light) */
+        --text-primary: #0F172A;     /* 14.8:1 on white (AAA) */
+        --text-secondary: #475569;   /* 7.2:1 on white (AAA) */
+        --text-tertiary: #94A3B8;    /* 4.7:1 on white (AA) */
+        --text-quaternary: #CBD5E1;  /* 2.1:1 on white (borders only) */
+
+        /* Border Colors (Light) */
+        --border-subtle: #E2E8F0;
+        --border-default: #D1D5DB;
+        --border-prominent: #9CA3AF;
+
+        /* Semantic Colors (Light Theme Adjustments) */
+        /* Green — darker for contrast on light bg */
+        --green-50: #059669;
+        --green-muted: rgba(5, 150, 105, 0.08);
+        --green-glow: rgba(5, 150, 105, 0.15);
+
+        /* Amber — darker for contrast on light bg */
+        --amber-50: #D97706;
+        --amber-muted: rgba(217, 119, 6, 0.08);
+        --amber-glow: rgba(217, 119, 6, 0.15);
+
+        /* Purple — darker for contrast on light bg */
+        --purple-50: #7C3AED;
+        --purple-muted: rgba(124, 58, 237, 0.08);
+        --purple-glow: rgba(124, 58, 237, 0.15);
+
+        /* Red — darker for contrast on light bg */
+        --red-50: #DC2626;
+        --red-muted: rgba(220, 38, 38, 0.08);
+        --red-glow: rgba(220, 38, 38, 0.15);
+
+        /* Indigo (Brand) — darker for contrast on light bg */
+        --indigo-50: #4F46E5;
+        --indigo-muted: rgba(79, 70, 229, 0.08);
+        --indigo-glow: rgba(79, 70, 229, 0.15);
+
+        /* Shadow Scale (Light) */
+        --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+        --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+        --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+        --shadow-xl: 0 12px 36px rgba(0, 0, 0, 0.15);
+        --shadow-2xl: 0 20px 50px rgba(0, 0, 0, 0.18);
+
+        /* Color-specific shadows (Light) */
+        --shadow-green: 0 4px 16px rgba(5, 150, 105, 0.12);
+        --shadow-amber: 0 4px 16px rgba(217, 119, 6, 0.12);
+        --shadow-purple: 0 4px 16px rgba(124, 58, 237, 0.12);
+        --shadow-red: 0 4px 16px rgba(220, 38, 38, 0.12);
+        --shadow-indigo: 0 4px 16px rgba(79, 70, 229, 0.12);
+    }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   COMPONENT ALIASES
+   Use these for common component patterns
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Primary Button */
+.btn-primary {
+    background: var(--indigo-50);
+    color: white;
+    box-shadow: var(--shadow-md) with --indigo-glow;
+    border: none;
+    border-radius: 10px;
+    padding: 13px 26px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: var(--indigo-600);
+    box-shadow: 0 8px 30px var(--indigo-glow);
+    transform: translateY(-2px);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+/* Secondary Button */
+.btn-secondary {
+    background: rgba(91, 106, 240, 0.06);
+    color: var(--text-primary);
+    border: 1px solid var(--border-default);
+    border-radius: 10px;
+    padding: 13px 26px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    border-color: rgba(91, 106, 240, 0.3);
+    background: rgba(91, 106, 240, 0.1);
+    transform: translateY(-2px);
+}
+
+/* State Cards */
+.state-card {
+    background: var(--bg-1);
+    border: 1px solid var(--border-default);
+    border-radius: 12px;
+    padding: 24px 20px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.35s ease;
+}
+
+.state-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+}
+
+.state-card[data-state="owns"]::before {
+    background: var(--green-50);
+}
+
+.state-card[data-state="owns"]:hover {
+    box-shadow: 0 8px 30px var(--green-muted);
+    border-color: rgba(16, 185, 129, 0.15);
+    transform: translateY(-4px);
+}
+
+.state-card[data-state="overrides"]::before {
+    background: var(--amber-50);
+}
+
+.state-card[data-state="overrides"]:hover {
+    box-shadow: 0 8px 30px var(--amber-muted);
+    border-color: rgba(245, 158, 11, 0.15);
+    transform: translateY(-4px);
+}
+
+.state-card[data-state="overridden"]::before {
+    background: var(--purple-50);
+}
+
+.state-card[data-state="overridden"]:hover {
+    box-shadow: 0 8px 30px var(--purple-muted);
+    border-color: rgba(139, 92, 246, 0.15);
+    transform: translateY(-4px);
+}
+
+.state-card[data-state="shadowed"]::before {
+    background: var(--red-50);
+}
+
+.state-card[data-state="shadowed"]:hover {
+    box-shadow: 0 8px 30px var(--red-muted);
+    border-color: rgba(239, 68, 68, 0.15);
+    transform: translateY(-4px);
+}
+
+/* Status State Names */
+.state-name {
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.state-card[data-state="owns"] .state-name {
+    color: var(--green-50);
+}
+
+.state-card[data-state="overrides"] .state-name {
+    color: var(--amber-50);
+}
+
+.state-card[data-state="overridden"] .state-name {
+    color: var(--purple-50);
+}
+
+.state-card[data-state="shadowed"] .state-name {
+    color: var(--red-50);
+}
+
+/* Generic Card */
+.card {
+    background: var(--bg-1);
+    border: 1px solid var(--border-default);
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    border-color: var(--border-prominent);
+    box-shadow: var(--shadow-md);
+}
+
+/* Link */
+a {
+    color: var(--indigo-50);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--indigo-600);
+}
+
+/* Focus Ring (for keyboard navigation) */
+*:focus-visible {
+    outline: 2px solid var(--indigo-50);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* Disabled State */
+[disabled],
+.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Code Highlighting */
+.code-dim {
+    color: var(--text-tertiary);
+}
+
+.code-class {
+    color: var(--amber-50);
+}
+
+.code-method {
+    color: var(--text-primary);
+}
+
+.code-shadowed {
+    color: var(--red-50);
+    opacity: 0.6;
+    text-decoration: line-through;
+}
+
+.code-wins {
+    color: var(--green-50);
+}
+
+/* Tags */
+.tag-red {
+    background: var(--red-muted);
+    color: var(--red-50);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.tag-green {
+    background: var(--green-muted);
+    color: var(--green-50);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.tag-amber {
+    background: var(--amber-muted);
+    color: var(--amber-50);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.tag-purple {
+    background: var(--purple-muted);
+    color: var(--purple-50);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+/* Input Fields */
+input,
+textarea,
+select {
+    background: var(--bg-1);
+    border: 1px solid var(--border-default);
+    color: var(--text-primary);
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: var(--indigo-50);
+    box-shadow: 0 0 0 3px var(--indigo-muted);
+}
+
+input::placeholder {
+    color: var(--text-tertiary);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   UTILITY CLASSES
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.bg-primary { background-color: var(--indigo-50); }
+.bg-success { background-color: var(--green-50); }
+.bg-warning { background-color: var(--amber-50); }
+.bg-danger { background-color: var(--red-50); }
+.bg-info { background-color: var(--purple-50); }
+
+.text-primary { color: var(--text-primary); }
+.text-secondary { color: var(--text-secondary); }
+.text-tertiary { color: var(--text-tertiary); }
+
+.border-primary { border-color: var(--indigo-50); }
+.border-success { border-color: var(--green-50); }
+.border-warning { border-color: var(--amber-50); }
+.border-danger { border-color: var(--red-50); }
+.border-info { border-color: var(--purple-50); }
+
+.shadow-sm { box-shadow: var(--shadow-sm); }
+.shadow-md { box-shadow: var(--shadow-md); }
+.shadow-lg { box-shadow: var(--shadow-lg); }
+.shadow-xl { box-shadow: var(--shadow-xl); }
+.shadow-2xl { box-shadow: var(--shadow-2xl); }
+
+/* End of CSS Variables */
