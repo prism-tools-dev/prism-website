@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { ThemeToggle } from "./ThemeToggle";
 
@@ -22,8 +23,9 @@ export function Nav() {
         {/* Logo */}
         <Link
           href="/"
-          className="font-mono text-sm font-bold tracking-wider text-text hover:text-prism-green transition-colors"
+          className="flex items-center gap-2 font-mono text-sm font-bold tracking-wider text-text hover:text-prism-green transition-colors"
         >
+          <Image src="/prism-mark.svg" alt="" width={24} height={24} className="dark:invert-0" />
           PRISM
         </Link>
 

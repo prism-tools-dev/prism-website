@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="g" x1="25%" y1="0%" x2="75%" y2="100%">
+      <stop offset="0%" stop-color="#fff"/>
+      <stop offset="45%" stop-color="#b0b0b0"/>
+      <stop offset="100%" stop-color="#e0e0e0"/>
+    </linearGradient>
+    <clipPath id="c">
+      <polygon points="100,100 100,-100 218,-62"/>
+      <polygon points="100,100 290,38 290,162"/>
+      <polygon points="100,100 218,262 100,300"/>
+      <polygon points="100,100 -18,262 -90,162"/>
+      <polygon points="100,100 -90,38 -18,-62"/>
+    </clipPath>
+  </defs>
+  <rect width="200" height="200" rx="32" fill="#111118"/>
+  <path d="M150,31 L181,126 L100,185 L19,126 L50,31Z M129,60 L148,116 L100,150 L52,116 L71,60Z" fill-rule="evenodd" fill="url(#g)"/>
+  <path d="M100,15 L181,74 L150,169 L50,169 L19,74Z M100,50 L148,85 L129,141 L71,141 L52,85Z" fill-rule="evenodd" fill="url(#g)"/>
+  <path d="M150,31 L181,126 L100,185 L19,126 L50,31Z M129,60 L148,116 L100,150 L52,116 L71,60Z" fill-rule="evenodd" fill="url(#g)" clip-path="url(#c)"/>
+</svg>

@@ -293,7 +293,7 @@ Branded placeholder when no class is selected, encouraging the user to move curs
 **Content:**
 - **Icon:** Diamond shape (◇), 20px, opacity 0.4
 - **Title:** "PRISM" — small, secondary text
-- **Subtitle:** "Program Resolution & Inheritance State Manager"
+- **Subtitle:** "Program Resolution & Inheritance Structure Map"
 - **Description:** "Open a source file and place your cursor inside a class to see its inheritance chain, method resolution order, and which version of each method actually runs."
 
 **Interaction:**

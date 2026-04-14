@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120">
+  <!-- Mark (nested SVG preserves coordinate system for clipPath) -->
+  <svg x="5" y="5" width="110" height="110" viewBox="0 0 200 200">
+    <defs>
+      <linearGradient id="hg" x1="25%" y1="0%" x2="75%" y2="100%">
+        <stop offset="0%" stop-color="#fff"/>
+        <stop offset="45%" stop-color="#b0b0b0"/>
+        <stop offset="100%" stop-color="#e0e0e0"/>
+      </linearGradient>
+      <clipPath id="hc">
+        <polygon points="100,100 100,-100 218,-62"/>
+        <polygon points="100,100 290,38 290,162"/>
+        <polygon points="100,100 218,262 100,300"/>
+        <polygon points="100,100 -18,262 -90,162"/>
+        <polygon points="100,100 -90,38 -18,-62"/>
+      </clipPath>
+    </defs>
+    <path d="M150,31 L181,126 L100,185 L19,126 L50,31Z M129,60 L148,116 L100,150 L52,116 L71,60Z" fill-rule="evenodd" fill="url(#hg)"/>
+    <path d="M100,15 L181,74 L150,169 L50,169 L19,74Z M100,50 L148,85 L129,141 L71,141 L52,85Z" fill-rule="evenodd" fill="url(#hg)"/>
+    <path d="M150,31 L181,126 L100,185 L19,126 L50,31Z M129,60 L148,116 L100,150 L52,116 L71,60Z" fill-rule="evenodd" fill="url(#hg)" clip-path="url(#hc)"/>
+  </svg>
+  <!-- Text -->
+  <text x="135" y="74" font-family="'Geist Mono', ui-monospace, monospace" font-size="48" font-weight="700" fill="#fff" letter-spacing="0.12em">PRISM</text>
+</svg>

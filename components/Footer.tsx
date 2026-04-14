@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { IconGitHub, IconLinkedIn, IconVSCode, IconCursor } from "./Icons";
 
 export function Footer() {
@@ -8,7 +9,8 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-10 md:grid-cols-4">
           {/* Brand */}
           <div>
-            <span className="font-mono text-sm font-bold tracking-wider text-text">
+            <span className="flex items-center gap-2 font-mono text-sm font-bold tracking-wider text-text">
+              <Image src="/prism-mark.svg" alt="" width={24} height={24} />
               PRISM
             </span>
             <p className="mt-3 text-sm text-text-3 leading-relaxed">
