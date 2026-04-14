@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About — The Story Behind PRISM",
   description:
-    "PRISM was born from a debug session at Uber where deep Python inheritance hierarchies made it impossible to know which method version actually ran. Built by Temilola Olowolayemo.",
+    "PRISM was born from a debug session at Uber where deep inheritance hierarchies made it impossible to know which method actually ran.",
   alternates: { canonical: "https://prism-tools.dev/about" },
   openGraph: {
     title: "About PRISM — The Story Behind the Tool",

@@ -17,11 +17,11 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: {
-    default: "PRISM — Live Method Resolution Order for VS Code | Python, TypeScript, Java & 7 More",
+    default: "PRISM — Live Method Resolution for VS Code | 10 Languages",
     template: "%s | PRISM",
   },
   description:
-    "PRISM shows which version of a method actually runs. Live MRO visualization, dead code detection, and inheritance analysis for Python, TypeScript, Java, C++, Go, and 5 more languages. Sub-200ms. Free VS Code extension.",
+    "See which method version actually runs. Live MRO visualization, dead code detection, and inheritance analysis for Python, TypeScript, Java, C++ and more. Free.",
   metadataBase: new URL("https://prism-tools.dev"),
   keywords: [
     "PRISM", "prism extension", "prism tools", "prism vscode",

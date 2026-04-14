@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Features — Live MRO, Dead Code Detection, 10 Languages",
+  title: "Features — Live MRO, Dead Code Detection",
   description:
-    "Everything PRISM can do: live method resolution order panel, four color-coded statuses, CodeLens annotations, workspace-wide dead code scanning, interactive mindmap and radial views. Python, TypeScript, Java, C++, Go, and more.",
+    "Live MRO panel, four color-coded statuses, CodeLens annotations, dead code scanning, and interactive graph views for 10 languages.",
   alternates: { canonical: "https://prism-tools.dev/features" },
   openGraph: {
     title: "PRISM Features — Live MRO, Dead Code Detection, 10 Languages",
