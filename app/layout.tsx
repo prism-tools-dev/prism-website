@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     template: "%s | PRISM",
   },
   description:
-    "See which method version actually runs. Live MRO visualization, dead code detection, and inheritance analysis for Python, TypeScript, Java, C++ and more. Free.",
+    "See which method version actually runs. Live MRO visualization, dead code detection, and inheritance analysis for Python, TypeScript, Java and more.",
   metadataBase: new URL("https://prism-tools.dev"),
   keywords: [
     "PRISM", "prism extension", "prism tools", "prism vscode",
