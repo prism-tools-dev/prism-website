@@ -43,7 +43,7 @@ export default function AboutPage() {
             transition={{ duration: 0.4, delay: 0.15 }}
             className="mt-4 font-mono text-xs tracking-widest text-text-3/60 uppercase"
           >
-            Program Resolution &amp; Inheritance Shadow Monitor
+            Program Resolution &amp; Inheritance Structure Map
           </motion.p>
 
           <motion.p

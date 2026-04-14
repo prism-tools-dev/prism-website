@@ -81,7 +81,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "SoftwareApplication",
               name: "PRISM",
-              alternateName: "Program Resolution & Inheritance Shadow Monitor",
+              alternateName: "Program Resolution & Inheritance Structure Map",
               applicationCategory: "DeveloperApplication",
               operatingSystem: "Windows, macOS, Linux",
               description:

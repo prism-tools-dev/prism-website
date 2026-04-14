@@ -1,4 +1,4 @@
-# PRISM — Program Resolution & Inheritance Shadow Monitor
+# PRISM — Program Resolution & Inheritance Structure Map
 
 > PRISM is a VS Code extension that shows, in real time, exactly where a method lives in its inheritance chain and whether the version you're editing is the one that actually runs.
 
