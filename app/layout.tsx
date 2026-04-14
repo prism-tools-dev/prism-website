@@ -99,6 +99,11 @@ export default function RootLayout({
               url: "https://prism-tools.dev",
               downloadUrl:
                 "https://marketplace.visualstudio.com/items?itemName=TemilolaOlowolayemo.prism-vscode",
+              sameAs: [
+                "https://marketplace.visualstudio.com/items?itemName=TemilolaOlowolayemo.prism-vscode",
+                "https://open-vsx.org/extension/TemilolaOlowolayemo/prism-vscode",
+                "https://github.com/Temilola23/PRISM",
+              ],
               offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
               author: {
                 "@type": "Person",
