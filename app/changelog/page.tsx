@@ -4,17 +4,29 @@ import { motion } from "framer-motion";
 
 const releases = [
   {
+    version: "v0.4.3",
+    date: "May 1, 2026",
+    label: "Smarter Classification",
+    changes: [
+      "6 method states: new cooperative (all overriders call super) and abstract (placeholder body) join the original four",
+      "Updated signal bar, method pills, legend, CodeLens, hover cards, and inline decorations for all 6 states",
+      "Classes inside conditional blocks (if/try) now resolve correctly",
+      "Improved resilience when analyzing projects with missing external dependencies",
+    ],
+    highlight: true,
+  },
+  {
     version: "v0.4.0",
     date: "April 14, 2026",
     label: "From Inspection to Action",
     changes: [
-      "Callers UX: \"Who calls this?\" impact analysis on method pills",
-      "Deterministic rule engine: PRX001\u2013PRX005 (shadow, circular, MRO conflict, missing abstract, signature mismatch)",
-      "Package/Namespace view: bird\u2019s-eye tree of all classes by directory",
-      "Entry point finder: auto-identify key classes and most-extended bases",
+      "Callers UX: \"Who calls this?\" reverse call graph with caller count badges",
+      "Cursor deduplication: skips redundant requests when cursor stays on same method",
+      "Structured output logging with per-request-type tags",
       "Privacy-respecting product analytics via PostHog",
+      "New pentagonal prism logo and rebrand to \"MRO & Inheritance Visualizer\"",
     ],
-    highlight: true,
+    highlight: false,
   },
   {
     version: "v0.3.6",
