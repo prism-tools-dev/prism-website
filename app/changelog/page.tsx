@@ -4,6 +4,18 @@ import { motion } from "framer-motion";
 
 const releases = [
   {
+    version: "v0.4.4",
+    date: "May 15, 2026",
+    label: "AI-Assisted Dead Code Remediation",
+    changes: [
+      "Fix with AI: one-click dead code fix for shadowed methods \u2014 sends prescriptive prompt to your AI agent with full MRO context",
+      "Audit with AI: diagnostic second opinion for overridden methods \u2014 AI classifies the pattern (Template Method, broken chain, or dead code) before suggesting changes",
+      "6 supported agents: GitHub Copilot Chat, Cline, Claude CLI, Codex CLI, Aider, Gemini CLI",
+      "Per-overrider super() call breakdown in audit prompts",
+    ],
+    highlight: true,
+  },
+  {
     version: "v0.4.3",
     date: "May 1, 2026",
     label: "Smarter Classification",
@@ -13,7 +25,7 @@ const releases = [
       "Classes inside conditional blocks (if/try) now resolve correctly",
       "Improved resilience when analyzing projects with missing external dependencies",
     ],
-    highlight: true,
+    highlight: false,
   },
   {
     version: "v0.4.0",
