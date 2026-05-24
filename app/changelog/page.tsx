@@ -4,6 +4,19 @@ import { motion } from "framer-motion";
 
 const releases = [
   {
+    version: "v0.4.5",
+    date: "May 24, 2026",
+    label: "Resolution Accuracy",
+    changes: [
+      "Same-name class collision fix \u2014 classes with identical names in different files are now correctly distinguished",
+      "Test/production separation \u2014 test-file descendants no longer inflate override counts or affect status classification",
+      "Collapsible \"Also overridden in N test files\" info when a production method is overridden by test classes",
+      "@overload deduplication \u2014 methods with multiple overload signatures no longer show duplicate CodeLens entries",
+      "Hover cards reposition beside triggers instead of covering them",
+    ],
+    highlight: true,
+  },
+  {
     version: "v0.4.4",
     date: "May 15, 2026",
     label: "AI-Assisted Dead Code Remediation",
@@ -13,7 +26,7 @@ const releases = [
       "6 supported agents: GitHub Copilot Chat, Cline, Claude CLI, Codex CLI, Aider, Gemini CLI",
       "Per-overrider super() call breakdown in audit prompts",
     ],
-    highlight: true,
+    highlight: false,
   },
   {
     version: "v0.4.3",
