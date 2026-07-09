@@ -4,6 +4,16 @@ import { motion } from "framer-motion";
 
 const releases = [
   {
+    version: "v0.4.7",
+    date: "July 9, 2026",
+    label: "Stability Fix",
+    changes: [
+      "Fixed a startup issue where the analysis backend could fail to load on some machines — analysis now works reliably across platforms",
+      "Broader Linux compatibility for the bundled backend, plus a Python fallback covering all supported versions (3.10–3.14)",
+    ],
+    highlight: true,
+  },
+  {
     version: "v0.4.6",
     date: "July 9, 2026",
     label: "PRX Rules",
@@ -15,7 +25,7 @@ const releases = [
       "Multi-inheritance dead code detected \u2014 sibling MRO shadowing (mixin wins over base) now surfaces in the Problems panel",
       "Older Linux support \u2014 the bundled backend runs on Ubuntu 22.04+ and auto-falls back to Python if the binary cannot start",
     ],
-    highlight: true,
+    highlight: false,
   },
   {
     version: "v0.4.5",
