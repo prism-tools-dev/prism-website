@@ -4,6 +4,20 @@ import { motion } from "framer-motion";
 
 const releases = [
   {
+    version: "v0.4.6",
+    date: "July 9, 2026",
+    label: "PRX Rules",
+    changes: [
+      "PRX rules \u2014 deterministic inheritance diagnostics with codes, like a linter. Dead code (PRX001), MRO errors (PRX002), and circular inheritance (PRX003) appear in the Problems panel",
+      "Informational rules (PRX004-008: missing abstract, broken super chain, signature mismatch, circular import, name collision) appear in the PRISM panel as a collapsible section",
+      "Configure per project via [tool.prism] in pyproject.toml, or suppress inline with # noqa: PRX001",
+      "Hook-aware analysis \u2014 Template Method hooks (pass or docstring-only bodies in non-ABC classes) are never flagged as abstract or broken chains",
+      "Multi-inheritance dead code detected \u2014 sibling MRO shadowing (mixin wins over base) now surfaces in the Problems panel",
+      "Older Linux support \u2014 the bundled backend runs on Ubuntu 22.04+ and auto-falls back to Python if the binary cannot start",
+    ],
+    highlight: true,
+  },
+  {
     version: "v0.4.5",
     date: "May 24, 2026",
     label: "Resolution Accuracy",
@@ -14,7 +28,7 @@ const releases = [
       "@overload deduplication \u2014 methods with multiple overload signatures no longer show duplicate CodeLens entries",
       "Hover cards reposition beside triggers instead of covering them",
     ],
-    highlight: true,
+    highlight: false,
   },
   {
     version: "v0.4.4",
