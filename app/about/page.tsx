@@ -385,9 +385,10 @@ export default function AboutPage() {
             className="space-y-6 text-text-2 font-sans leading-relaxed"
           >
             <p>
-              PRISM is free to use. The codebase is coming to open source after
-              refactoring and code review is complete. We believe good developer
-              tools should be transparent, auditable, and community-driven.
+              PRISM is free to use — every language, every analysis surface,
+              no paywall. The engine is built with a zero-false-positive
+              discipline: every “this never runs” claim is validated against
+              real-world codebases like PyTorch Lightning before it ships.
             </p>
 
             <a

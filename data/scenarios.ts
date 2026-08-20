@@ -1,7 +1,13 @@
 // Pre-computed PRISM analysis results for the interactive playground.
 // These mirror the exact JSON contract the extension produces.
 
-export type Status = "owns" | "overrides" | "overridden" | "shadowed";
+export type Status =
+  | "owns"
+  | "overrides"
+  | "overridden"
+  | "cooperative"
+  | "abstract"
+  | "shadowed";
 
 export interface MethodInfo {
   name: string;
@@ -360,5 +366,7 @@ export const statusMeta: Record<Status, { label: string; color: string; bgClass:
   owns:       { label: "Owns",       color: "rgb(var(--prism-green))", bgClass: "bg-prism-green/10", textClass: "text-prism-green", borderClass: "border-prism-green/30" },
   overrides:  { label: "Overrides",  color: "rgb(var(--prism-amber))",  bgClass: "bg-prism-amber/10",  textClass: "text-prism-amber",  borderClass: "border-prism-amber/30" },
   overridden: { label: "Overridden", color: "rgb(var(--prism-purple))", bgClass: "bg-prism-purple/10", textClass: "text-prism-purple", borderClass: "border-prism-purple/30" },
+  cooperative: { label: "Cooperative", color: "rgb(var(--prism-teal))",  bgClass: "bg-prism-teal/10",  textClass: "text-prism-teal",  borderClass: "border-prism-teal/30" },
+  abstract:   { label: "Abstract",   color: "rgb(var(--prism-slate))",  bgClass: "bg-prism-slate/10",  textClass: "text-prism-slate",  borderClass: "border-prism-slate/30" },
   shadowed:   { label: "Shadowed",   color: "rgb(var(--prism-red))",    bgClass: "bg-prism-red/10",    textClass: "text-prism-red",    borderClass: "border-prism-red/30" },
 };

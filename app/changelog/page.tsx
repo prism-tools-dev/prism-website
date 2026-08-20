@@ -4,6 +4,22 @@ import { motion } from "framer-motion";
 
 const releases = [
   {
+    version: "v0.4.8",
+    date: "August 20, 2026",
+    label: "Warm Starts & Reliability",
+    changes: [
+      "Instant warm starts \u2014 the workspace index persists across sessions; reopening a repo re-analyzes only the files that changed. Large repos go from minutes to seconds",
+      "No more endless re-indexing on big monorepos \u2014 file changes re-index just the changed file, and build/cache churn is ignored entirely",
+      "PRX010 protocol compliance \u2014 classes inheriting a typing.Protocol that skip a required member are flagged; PRX007 now traces real multi-file import cycles",
+      "Severity-based routing \u2014 change a rule's severity in pyproject.toml and it moves between the Problems panel and the PRISM panel",
+      "No errors on unsaved files or mid-keystroke \u2014 PRISM keeps the last good analysis while you type instead of flashing errors",
+      "Analysis no longer freezes when classes inherit from Protocol, Enum, TestCase, and other standard-library bases",
+      "Mixin-aware panel \u2014 methods dead for a descendant's instances (mixin ordering) show the same story in the panel as in the editor, with a dedicated AI audit prompt",
+      "Test-aware views \u2014 the graph and text tree group test subclasses behind a collapsible node; scans label production-only scope",
+    ],
+    highlight: true,
+  },
+  {
     version: "v0.4.7",
     date: "July 9, 2026",
     label: "Stability Fix",
@@ -11,7 +27,7 @@ const releases = [
       "Fixed a startup issue where the analysis backend could fail to load on some machines — analysis now works reliably across platforms",
       "Broader Linux compatibility for the bundled backend, plus a Python fallback covering all supported versions (3.10–3.14)",
     ],
-    highlight: true,
+    highlight: false,
   },
   {
     version: "v0.4.6",

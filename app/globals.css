@@ -20,6 +20,8 @@
     --prism-amber: 217 119 6;
     --prism-purple: 124 58 237;
     --prism-red: 220 38 38;
+    --prism-teal: 13 148 136;
+    --prism-slate: 100 116 139;
 
     /* Syntax highlighting */
     --syn-str: 5 150 105;
@@ -43,6 +45,8 @@
     --prism-amber: 245 158 11;
     --prism-purple: 139 92 246;
     --prism-red: 239 68 68;
+    --prism-teal: 45 212 191;
+    --prism-slate: 148 163 184;
 
     /* Syntax highlighting */
     --syn-str: 110 231 183;

@@ -20,6 +20,16 @@ const states: { status: Status; description: string; example: string }[] = [
     example: "DLEstimatorBase.setup_dataloader",
   },
   {
+    status: "cooperative",
+    description: "Overridden, but every override calls super(). The body still runs in the chain.",
+    example: "Callback.setup",
+  },
+  {
+    status: "abstract",
+    description: "A contract placeholder — @abstractmethod, NotImplementedError, or ellipsis. Subclasses supply the real logic.",
+    example: "DLEstimatorBase.forward",
+  },
+  {
     status: "shadowed",
     description: "Defined here but a class earlier in the MRO wins. Dead code.",
     example: "DLEstimatorBase.configure_optimizers",
@@ -30,12 +40,12 @@ export function StatusStates() {
   return (
     <section className="relative py-24 px-6 border-t border-border">
       <div className="mx-auto max-w-6xl">
-        <div className="label mb-3">The Four States</div>
+        <div className="label mb-3">The Six States</div>
         <h2 className="text-section font-mono font-bold text-text mb-12">
           Every method. One status.
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {states.map((s, i) => {
             const meta = statusMeta[s.status];
             return (

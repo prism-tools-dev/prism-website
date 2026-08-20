@@ -59,6 +59,8 @@ function statusBg(s: Status): string {
     owns: "rgba(16,185,129,0.15)",
     overrides: "rgba(245,158,11,0.15)",
     overridden: "rgba(139,92,246,0.15)",
+    cooperative: "rgba(45,212,191,0.15)",
+    abstract: "rgba(148,163,184,0.15)",
     shadowed: "rgba(239,68,68,0.15)",
   };
   return map[s];

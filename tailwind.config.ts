@@ -27,6 +27,8 @@ const config: Config = {
           amber: v("prism-amber"),
           purple: v("prism-purple"),
           red: v("prism-red"),
+          teal: v("prism-teal"),
+          slate: v("prism-slate"),
         },
       },
       fontFamily: {

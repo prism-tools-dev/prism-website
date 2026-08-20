@@ -36,7 +36,7 @@ export function CTASection() {
           className="text-text-2 font-sans text-base mb-8 max-w-lg mx-auto"
         >
           Install PRISM and see your inheritance chain in real time.
-          Free forever. Open source coming soon.
+          Free forever. Ten languages included.
         </motion.p>
 
         <motion.div
