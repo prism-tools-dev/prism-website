@@ -4,6 +4,19 @@ import { motion } from "framer-motion";
 
 const releases = [
   {
+    version: "v0.4.10",
+    date: "October 23, 2026",
+    label: "Framework-Accurate Resolution",
+    changes: [
+      "Inheritance chains now match Python\u2019s own MRO on 100% of Django REST Framework classes and 99% of Django classes \u2014 module-qualified, aliased and re-exported bases, src/ layouts, Generic[T] bases and same-named classes all resolve correctly",
+      "Uses your selected Python environment \u2014 base classes from packages installed in your virtualenv (Django, DRF, Lightning) resolve through the interpreter chosen in the Python extension",
+      "No more false \u201cshadowed\u201d warnings \u2014 a base method that a subclass overrides is shown as overridden or cooperative, not dead code; shadowed is reserved for methods that genuinely never run",
+      "\u201cChain incomplete\u201d notice \u2014 when a base class can\u2019t be found, the panel names it instead of showing a silently shortened chain",
+      "Same answer however a path is written \u2014 workspace paths with relative segments no longer hide subclasses in other files",
+    ],
+    highlight: true,
+  },
+  {
     version: "v0.4.8",
     date: "August 20, 2026",
     label: "Warm Starts & Reliability",
@@ -17,7 +30,7 @@ const releases = [
       "Mixin-aware panel \u2014 methods dead for a descendant's instances (mixin ordering) show the same story in the panel as in the editor, with a dedicated AI audit prompt",
       "Test-aware views \u2014 the graph and text tree group test subclasses behind a collapsible node; scans label production-only scope",
     ],
-    highlight: true,
+    highlight: false,
   },
   {
     version: "v0.4.7",
