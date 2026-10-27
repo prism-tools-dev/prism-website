@@ -4,6 +4,21 @@ import { motion } from "framer-motion";
 
 const releases = [
   {
+    version: "v0.4.11",
+    date: "October 27, 2026",
+    label: "Every Platform, One Story",
+    changes: [
+      "Intel Macs \u2014 PRISM no longer fails to start by trying the Apple Silicon backend; it falls back cleanly to Python 3.10+",
+      "Linux on ARM64 \u2014 the bundled backend now runs on Ubuntu 22.04, Debian 12 and any system with glibc 2.35 or newer",
+      "Works without tree-sitter \u2014 Python analysis keeps working on offline or locked-down machines, even in projects that also contain JavaScript or TypeScript",
+      "Windows fallback now looks for python instead of python3",
+      "CodeLens names the right base \u2014 \u201cOverrides\u201d shows the base class whose version is replaced, not the method\u2019s own class",
+      "One story in every view \u2014 a base method replaced by the class under your cursor is shown in grey as \u201creplaced in this chain\u201d, not red dead code, and placeholder bodies are labelled stub hooks",
+      "The first file opened gets annotations right away, and closing a window no longer leaves the analysis process running",
+    ],
+    highlight: true,
+  },
+  {
     version: "v0.4.10",
     date: "October 23, 2026",
     label: "Framework-Accurate Resolution",
@@ -14,7 +29,7 @@ const releases = [
       "\u201cChain incomplete\u201d notice \u2014 when a base class can\u2019t be found, the panel names it instead of showing a silently shortened chain",
       "Same answer however a path is written \u2014 workspace paths with relative segments no longer hide subclasses in other files",
     ],
-    highlight: true,
+    highlight: false,
   },
   {
     version: "v0.4.8",
